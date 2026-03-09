@@ -4,7 +4,7 @@
 The script builds an email message, opens a secure SSL connection to Gmail's SMTP server, authenticates with an app password, and sends the message to the target recipient. A success or error message is printed in the terminal.
 
  
----
+ 
 
 ## Problem Statement
 Sending emails manually can be repetitive and slow. This tool automates **sending a simple text email** to any recipient using Python, which is useful for:
@@ -13,7 +13,7 @@ Sending emails manually can be repetitive and slow. This tool automates **sendin
 - Automating notifications
 - Demonstrating basic Python email automation for SOC or security alerts
 
----
+ 
 
 ## Approach / Methodology
 
@@ -31,23 +31,22 @@ Sending emails manually can be repetitive and slow. This tool automates **sendin
 5. Sends the email message to the receiver.
 6. Prints success or error message.
 
----
-
+ 
 ## Output / Results
 
-Example output screenshot saved in the repository:
+Successfully Email Sent to the receiver.
 
-![Email sent successfully](../../outputs/1.%20simple%20text%20mail.png)
+![Email sent successfully](../../outputs/simple%20text%20mail.png))
 
 
----
+ 
 
 ## Real-World Application
 - Automates alert emails for SOC monitoring scripts.
 - Can be used in security automation workflows (e.g., notifying analysts of suspicious activity).
 - Useful for teaching email automation or proof-of-concept scripts in cybersecurity exercises.
 
----
+ 
 
 ## Advantages
 - Simple and easy to configure.
