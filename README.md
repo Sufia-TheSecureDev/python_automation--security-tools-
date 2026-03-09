@@ -23,7 +23,7 @@ Tools:
 Directory:
 
 
-./email-automation-communication/
+[Email automation communication](./email-automation-communication)
 
 
  
@@ -39,7 +39,7 @@ Tools:
 Directory:
 
 
-./screenshot-surveillance-user-monitoring/
+[Screenshot, surveillance & user activity monitoring](./screenshot-surveillance-user-monitoring)
 
 
 
@@ -58,7 +58,7 @@ Tools:
 Directory:
 
  
-./system-monitoring-host-security/
+[System monitoring & host based security](./system-monitoring-host-security)
  
 
 
@@ -76,7 +76,7 @@ Tools:
 Directory:
 
  
-./web-automation-scraping/
+[Web automation, scraping & Data extraction](./web-automation-scraping)
  
 
 
@@ -93,7 +93,7 @@ Tools:
 Directory:
 
  
-./malware-analysis-threat-intel/
+[Malware analysis & Threat intelligence](./malware-analysis-threat-intel)
  
 
 
@@ -111,7 +111,7 @@ Tools:
 Directory:
 
  
-./windows-internals-automation/
+[Windows internals & os-specific automation](./windows-internals-automation)
  
 
 
@@ -126,7 +126,7 @@ Tools:
 
 Directory:
  
-./ai-intelligent-automation/
+[Ai & intelligent automation](./ai-intelligent-automation)
  
 
 
