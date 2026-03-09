@@ -36,7 +36,7 @@ Sending emails manually can be repetitive and slow. This tool automates **sendin
 
 Successfully Email Sent to the receiver.
 
-![Email sent successfully](../outputs/simple%20text%20mail.png))
+![Email sent successfully](../outputs/simple%20text%20mail.png)
 
 
  
