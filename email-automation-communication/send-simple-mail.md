@@ -1,7 +1,9 @@
 # Send Simple Mail
 
 ## System Workflow / Architecture
-The script builds an email message, opens a secure SSL connection to Gmail's SMTP server, authenticates with an app password, and sends the message to the target recipient. A success or error message is printed in the terminal.
+A Quick Overview
+
+![Email sent architecture](../outputs/email_simple_text.png)
 
  
  
