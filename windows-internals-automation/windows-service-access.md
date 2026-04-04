@@ -1,22 +1,17 @@
-# Windows Registry Value Check
+# Windows Service Access Monitor
 
 ## System Workflow / Architecture
 
-![Architecture](../outputs/registry_check_architecture.png)
-
-Windows Registry → Python Script → Read Registry Values → Compare with Baseline → Detect Changes → Log Alerts → Administrator Review
-
- 
+![Architecture](../outputs/service_monitor_architecture.png)
 
 ## Problem Statement
 
-Windows Registry is a critical component of the operating system where startup programs and system configurations are stored.
+Windows Services run critical system processes and background applications.  
+Attackers and malware often create or modify services to maintain persistence, execute malicious binaries, or gain unauthorized system access.
 
-Attackers and malware often modify registry values (especially in Run and Startup locations) to maintain persistence and execute malicious programs automatically when the system starts.
+Monitoring Windows services manually is difficult because a system may contain hundreds of services, and changes can occur silently in the background.
 
-Manual monitoring of registry values is difficult and time-consuming for administrators and cybersecurity analysts.
-
-This tool solves the problem by automatically checking registry values, comparing them with a baseline, and logging any new, modified, or deleted entries for security monitoring.
+This tool solves the problem by automatically enumerating Windows services, creating a baseline, and detecting newly created, deleted, or modified services for security monitoring and investigation.
 
  
 
@@ -25,7 +20,7 @@ This tool solves the problem by automatically checking registry values, comparin
 ### Technologies Used
 
 - Python
-- Winreg (Windows Registry Access)
+- PyWin32 (win32service, win32serviceutil)
 - JSON
 - Logging
 - OS Module
@@ -34,21 +29,23 @@ This tool solves the problem by automatically checking registry values, comparin
 
 ### Workflow / Pipeline
 
-1. Script reads registry values from Windows Run key
-2. If baseline does not exist, it creates a registry baseline
-3. Current registry values are collected
-4. Script compares current values with baseline
-5. New registry values are detected
-6. Modified registry values are detected
-7. Deleted registry values are detected
-8. All changes are logged in a log file
-9. Administrator reviews the logs
+1. Python script connects to Windows Service Control Manager (SCM)
+2. Script collects all available services
+3. Service details (name, state, binary path) are extracted
+4. Baseline file is created if it does not exist
+5. Current services are compared with baseline
+6. New services are detected
+7. Deleted services are detected
+8. Service state changes are detected
+9. Service binary modifications are detected
+10. All changes are logged for security analysis
 
  
 
 ## Output / Results
 
-![Output](../outputs/14.%20Windows%20Registry%20value%20check.png 
+![Output](../outputs/15.%20Windows%20Service%20access.png)
+ 
 
 ## Real-World Application
 
@@ -57,23 +54,25 @@ This tool can be used in real-world environments such as:
 - SOC monitoring systems
 - Windows endpoint monitoring
 - Malware persistence detection
-- Registry integrity monitoring
+- Service integrity monitoring
 - Incident response investigation
 - Threat hunting
-- System administration security checks
 - Endpoint security auditing
+- System administration monitoring
 
-SOC analysts and system administrators can use this tool to detect unauthorized registry modifications and identify potential malware persistence techniques.
+SOC analysts and system administrators can use this tool to detect unauthorized service creation, service binary modifications, and suspicious service behavior in Windows systems.
 
-
+ 
 
 ## Advantages
 
-- Lightweight registry monitoring
-- Detects new, modified, and deleted registry values
-- Baseline-based integrity checking
+- Lightweight service monitoring tool
+- Detects new and deleted services
+- Detects service state changes
+- Detects binary path modifications
+- Baseline-based integrity monitoring
 - Useful for malware persistence detection
 - Easy to integrate with automation
-- Supports logging for investigation
-- Beginner-friendly cybersecurity monitoring tool
-- Can be scheduled with Task Scheduler
+- Logging support for investigation
+- Can be scheduled using Task Scheduler
+- Beginner-friendly cybersecurity monitoring project
