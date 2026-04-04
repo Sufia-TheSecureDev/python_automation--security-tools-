@@ -3,9 +3,6 @@
 ## System Workflow / Architecture
 
 ![Architecture](../outputs/registry_check_architecture.png)
-
-Windows Registry → Python Script → Read Registry Values → Compare with Baseline → Detect Changes → Log Alerts → Administrator Review
-
  
 
 ## Problem Statement
