@@ -42,7 +42,7 @@ This tool solves the problem by automatically accessing Windows Security Event L
 
 ## Output / Results
 
-![](,,/outputs/17.%20Access%20event%20(4624%2C4625)%20viewer%20logs%20using%20python.png) 
+![Output](../outputs/17.%20Access%20event_4624_4625_viewer%20logs%20using%20python.png)
  
 
 ## Real-World Application
